@@ -25,3 +25,4 @@ spec:
   hostPath:
     path: "/mnt/some new/directory/structure/"
     type: DirectoryOrCreate
+---
