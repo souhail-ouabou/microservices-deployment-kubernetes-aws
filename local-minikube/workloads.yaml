@@ -39,17 +39,20 @@ spec:
       containers:
       - name: position-simulator
         image: richardchesterwood/k8s-fleetman-position-simulator:resources
-        env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: production-microservice
-        envFrom:
-        - configMapRef:
-            name: global-database-config-v3
         resources:
           requests:
             memory: 200Mi
             cpu: 50m
-
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: production-microservice
+        volumeMounts:
+        - name: database-config-volume
+          mountPath: /etc/any/directory/config
+      volumes:
+      - name: database-config-volume
+        configMap:
+          name: global-database-config-v4
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -71,9 +74,6 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        envFrom:
-        - configMapRef:
-            name: global-database-config-v3
         resources:
           requests:
             memory: 200Mi

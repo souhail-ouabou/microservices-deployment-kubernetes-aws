@@ -1,8 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: global-database-config-v3
+  name: global-database-config-v4
   namespace: default
 data:
-  DATABASE_URL: "https://CHANGED.somewhere.com:3306"
-  DATABASE_PASSWORD: "P@SSW0rd1"
+  database.properties: |
+    database.url=https://CHANGED.somewhere.com:3306
+    database.password=P@SSW0rd1
