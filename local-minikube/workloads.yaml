@@ -45,12 +45,12 @@ spec:
         - name: DATABASE_URL
           valueFrom:
             configMapKeyRef:
-              name: global-database-config
+              name: global-database-config-v2
               key: DATABASE_URL
         - name: DATABASE_PASSWORD
           valueFrom:
             configMapKeyRef:
-              name: global-database-config
+              name: global-database-config-v2
               key: DATABASE_PASSWORD
         resources:
           requests:
@@ -81,12 +81,12 @@ spec:
         - name: DATABASE_URL
           valueFrom:
             configMapKeyRef:
-              name: global-database-config
+              name: global-database-config-v2
               key: DATABASE_URL
         - name: DATABASE_PASSWORD
           valueFrom:
             configMapKeyRef:
-              name: global-database-config
+              name: global-database-config-v2
               key: DATABASE_PASSWORD
         resources:
           requests:
