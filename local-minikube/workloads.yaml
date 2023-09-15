@@ -42,6 +42,16 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
+        - name: DATABASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: global-database-config
+              key: DATABASE_URL
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: global-database-config
+              key: DATABASE_PASSWORD
         resources:
           requests:
             memory: 200Mi
@@ -68,6 +78,16 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
+        - name: DATABASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: global-database-config
+              key: DATABASE_URL
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: global-database-config
+              key: DATABASE_PASSWORD
         resources:
           requests:
             memory: 200Mi
@@ -90,6 +110,10 @@ spec:
       containers:
       - name: api-gateway
         image: richardchesterwood/k8s-fleetman-api-gateway:performance
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
