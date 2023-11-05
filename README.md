@@ -23,7 +23,7 @@ Use Kubernetes to deploy a Microservice architecture
 ## Microservices architecture
 
 ![App Screenshot](https://gcdnb.pbrd.co/images/X8WQYkZLh8Py.png?o=1)
-![App Screenshot](https://i.ibb.co/Qrc6qNM/image.png)
+![App Screenshot](https://i.ibb.co/XS4zdst/image.png)
 
 ![App Screenshot](https://miro.medium.com/v2/resize:fit:1400/1*nEq9DFmyu4LEmHmrBwQcGA.png)
 
