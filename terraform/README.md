@@ -1,3 +1,5 @@
+A Terraform module to Provision AWS Elastic Kubernetes (EKS) clusters and worker nodes
+
 ### initialize
 
     terraform init
