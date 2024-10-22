@@ -3,7 +3,7 @@
 Use Kubernetes to deploy a Microservice architecture
 
 
-## Lessons Learned
+## Project Overview
 
 - Automated cloud infrastructure provisioning with Terraform for consistent deployments
 - Implemented robust disaster recovery with EBS volume snapshots.
@@ -27,4 +27,8 @@ Use Kubernetes to deploy a Microservice architecture
 
 ![App Screenshot](https://miro.medium.com/v2/resize:fit:1400/1*nEq9DFmyu4LEmHmrBwQcGA.png)
 
+## Contact Information
+
+- **Name:** Souhail OUABOU
+- **Email:** souhail7ouabou@gmail.com
 
